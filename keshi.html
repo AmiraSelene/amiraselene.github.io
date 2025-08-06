@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keshi - Artist Profile</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+      background: url('keshi.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(0px);
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .home-button {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+      font-size: 16px;
+    }
+
+    .home-button:hover {
+      background-color: #ff4da6;
+      color: #fff;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ff4da6;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      font-weight: 300;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff4da6;
+      padding-bottom: 8px;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    ul li::before {
+      content: "🎵 ";
+      margin-right: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #ff4da6;
+      font-size: 28px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #000;
+      transform: scale(1.2);
+    }
+
+    .album {
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .album:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .album h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .song-list {
+      display: none;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="home-button">← Home</a>
+    <img src="keshii.jpg" alt="Keshi" class="profile-pic">
+    <h1>Keshi</h1>
+    <p>Musician • Singer • Songwriter • Producer</p>
+  </header>
+
+  <div class="content">
+    <section>
+      <h2>About Keshi</h2>
+      <p><strong>Keshi</strong>(Casey Luong) is a Vietnamese-American singer, songwriter, producer, and multi-instrumentalist known for his smooth blend of lo-fi, R&B, and indie pop. Emerging from the underground music scene, Keshi quickly gained a devoted following through his emotionally raw lyrics, soothing vocals, and DIY production style.</p>
+      <p>His music often explores themes of love, heartbreak, self-reflection, and vulnerability, resonating deeply with listeners seeking authenticity and intimacy. Keshi’s sound is characterized by gentle guitar melodies, mellow beats, and a warm, intimate vocal delivery, creating a calming yet poignant atmosphere.</p>
+      <p>Keshi first rose to prominence with singles like “like i need u” and “2 soon,” which helped him build momentum leading to critically acclaimed projects such as “bandaids” and “always.” His work continues to evolve, combining storytelling with a modern, minimalist aesthetic that sets him apart in today’s music landscape.</p>
+      <p>With a rapidly growing fanbase and consistent output, Keshi is recognized as a leading figure in the lo-fi and bedroom pop movement, blending DIY ethos with polished production to create deeply personal music.</p>
+   </section>
+
+ <section>
+      <h2>Albums & EPs</h2>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 Requiem (2024)</h3>
+        <ul class="song-list">
+          <li>Say</li>
+          <li>Dream</li>
+          <li>Soft Spot</li>
+          <li>Texas</li>
+        </ul>
+      </div>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 GABRIEL (2022)</h3>
+        <ul class="song-list">
+          <li>Get It</li>
+          <li>Touch</li>
+          <li>Somebody</li>
+          <li>Angel</li>
+        </ul>
+      </div>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 Skeletons (2020 - EP)</h3>
+        <ul class="song-list">
+          <li>Skeletons</li>
+          <li>Right Here</li>
+        </ul>
+      </div>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 Bandaids (2020 - EP)</h3>
+        <ul class="song-list">
+          <li>Blue</li>
+          <li>Less of You</li>
+        </ul>
+      </div>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 Always (2019 - EP)</h3>
+        <ul class="song-list">
+          <li>Always</li>
+          <li>Talk</li>
+          <li>Drunk</li>
+        </ul>
+      </div>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 The Reaper (2018 - EP)</h3>
+        <ul class="song-list">
+          <li>Like I Need U</li>
+          <li>Over U</li>
+        </ul>
+      </div>
+    </section>
+
+<section>
+      <h2>Popular Songs</h2>
+      <ul>
+	<li>soft spot</li>
+        <li>like i need u</li>
+        <li>right here</li>
+        <li>blue</li>
+        <li>drunk</li>
+        <li>limbo</li>
+        <li>get it</li>
+        <li>less of you</li>
+        <li>talk</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Follow Keshi</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/keshi/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@keshi" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@keshibeats" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com/artist/3pc0bOVB5whxmD50W79wwO?si=OTAAOUTiSruKnCih4UQXdQ" target="_blank"><i class="fab fa-spotify"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Keshi Fan Page. For music lovers, by music lovers.
+  </footer>
+
+  <script>
+    function toggleSongs(albumElement) {
+      const songList = albumElement.querySelector('.song-list');
+      songList.style.display = songList.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

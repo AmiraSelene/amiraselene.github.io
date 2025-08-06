@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DO YOU LOVE MUSIC?</title>
+
+  <!-- Add Parisienne Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Your existing CSS here (omitted for brevity) */
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+      height: 100%;
+    }
+
+    /* Update glow class to use Parisienne */
+    .glow {
+      font-family: 'Parisienne', cursive;
+      text-shadow: 0 0 5px #fff, 0 0 10px #ff4da6, 0 0 20px #ff4da6;
+    }
+
+    .auth-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .auth-screen h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .auth-screen p {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .auth-screen input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      width: 250px;
+      text-align: center;
+    }
+
+    .auth-screen button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff4da6;
+      color: white;
+      cursor: pointer;
+    }
+
+    .auth-screen button:hover {
+      background-color: #e04394;
+    }
+
+    .error-message {
+      color: #ff4da6;
+      margin-top: 10px;
+    }
+
+    /* Hidden content initially */
+    .site-content {
+      display: none;
+    }
+
+    nav {
+      background-color: #111;
+      text-align: center;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    nav button#logoutBtn {
+      margin-left: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      background: #ff4da6;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+
+    nav button#logoutBtn:hover {
+      background: #e04394;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Parisienne', cursive;
+      font-size: 36px;
+      text-shadow: 0 0 10px #00ffff;
+      margin: 0;
+    }
+
+    .container {
+      padding: 40px 25px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .introduction {
+      background-color: #111;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    }
+
+    .introduction h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff4da6;
+    }
+
+    .introduction p {
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .video {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .video h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 640px;
+      height: 360px;
+      border: none;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+      text-shadow: 0 0 8px #ff4da6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Authorization Screen -->
+  <div class="auth-screen">
+    <h1 class="glow">Do You Love Music?</h1>
+    <p>If you love music, enter <strong>"musiclover"</strong> as a password</p>
+    <input type="password" id="passwordInput" placeholder="Enter password here" />
+    <button onclick="checkPassword()">Enter</button>
+    <div id="errorMsg" class="error-message"></div>
+  </div>
+
+  <!-- Hidden Site Content -->
+  <div class="site-content" id="siteContent">
+    <header>
+      <h1>🎶 Do You Love Music? 🎶</h1>
+    </header>
+
+    <nav>
+      <a href="keshi.html">Keshi</a>
+      <a href="yung kai.html">Yung Kai</a>
+      <a href="jhin.html">JHIN</a>
+      <a href="luke chiang.html">Luke Chiang</a>
+      <a href="wave to earth.html">Wave to Earth</a>
+      <a href="starfall.html">Starfall</a>
+      <a href="silent sanctuary.html">Silent Sanctuary</a>
+      <button id="logoutBtn">Logout</button>
+    </nav>
+<center>
+  <div class="container">
+    <!-- MUSIC SECTION -->
+    <section class="introduction">
+      <h2>MUSIC</h2>
+      <p><em>Music</em> has a way of reaching us where words fall short. It doesn’t ask for permission—it just slips in quietly, echoing through our minds and settling deep in our hearts. Whether it's the comfort of a familiar melody or the thrill of discovering something new, music has the remarkable power to move us, heal us, and even change us.</p>
+      <p>For many, music is more than sound—it's a safe place. A slow song can wrap around you like a blanket when the world feels heavy. An upbeat rhythm can spark joy in moments of sadness. A simple lyric can say exactly what you’ve been feeling, even when you couldn’t find the words yourself.</p>
+      <p>Music connects us to our emotions, our memories, and each other. It helps us process grief, celebrate love, gather courage, or simply breathe a little easier. In times of loneliness, music reminds us: you’re not alone. Someone, somewhere, felt this too.</p>
+      <p>The effect of music is deeply personal. It reflects who we are, who we’ve been, and sometimes, who we hope to become.</p>
+      <p>In today’s world, music is more personal and accessible than ever. With platforms like Spotify, YouTube, and TikTok, artists from anywhere can find an audience—and listeners can explore entire genres with a single tap. This has led to a rich diversity in sounds, from global pop and classical fusions to lo-fi indie, drill, EDM, and beyond.</p>
+      <p>Listeners are now curators: we build playlists around emotions—study mode, heartbreak, late-night drives, healing. Music isn’t just background anymore; it’s part of how we feel and navigate life.</p>
+      <p>Music has the incredible power to transport us beyond the everyday, and the artists I listen to are my gateway to escape reality. Their voices, stories, and melodies create a refuge where I can unwind, reflect, and dream. Each song is a portal to different emotions and worlds, helping me find peace, inspiration, and connection even when life feels overwhelming. Through their art, I find solace and a beautiful escape from the noise of the world.</p>
+    </section>
+
+    <!-- ✨ NEW PERSONAL SECTION -->
+    <section class="introduction" style="margin-top: 40px;">
+      <h2>What Music Means to Me</h2>
+      <p>Music brings me peace in ways I can’t always explain. Whether I'm feeling overwhelmed, anxious, or just need a moment to breathe, a good song can quiet my thoughts and bring me back to the present. It’s like a reset button for my soul.</p>
+      <p>The artists I love—<strong>Keshi</strong>, <strong>Yung Kai</strong>, <strong>JHIN</strong>, <strong>Luke Chiang</strong>, <strong>Wave to Earth</strong>, <strong>Starfall</strong>, and <strong>Silent Sanctuary</strong>—each bring something unique to my world. Their music has helped me feel seen, understood, and inspired. Through their lyrics and sounds, I’ve found comfort, clarity, and strength.</p>
+      <p>This site is a space to appreciate them and to share that connection with anyone who’s ever felt something deeply through a song.</p>
+    </section>
+  </div>
+</center>
+    <footer>
+      &copy; 2025 DO YOU LOVE MUSIC? All rights reserved.
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const isAuthenticated = localStorage.getItem('isAuthenticated');
+      const authScreen = document.querySelector('.auth-screen');
+      const siteContent = document.getElementById('siteContent');
+      const logoutBtn = document.getElementById('logoutBtn');
+
+      if (isAuthenticated === 'true') {
+        authScreen.style.display = 'none';
+        siteContent.style.display = 'block';
+      } else {
+        authScreen.style.display = 'flex';
+        siteContent.style.display = 'none';
+      }
+
+      logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('isAuthenticated');
+        authScreen.style.display = 'flex';
+        siteContent.style.display = 'none';
+        document.getElementById('passwordInput').value = '';
+        document.getElementById('errorMsg').textContent = '';
+      });
+    });
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const correctPassword = "musiclover";
+      const errorMsg = document.getElementById("errorMsg");
+
+      if (input === correctPassword) {
+        localStorage.setItem('isAuthenticated', 'true');
+        document.querySelector(".auth-screen").style.display = "none";
+        document.getElementById("siteContent").style.display = "block";
+        errorMsg.textContent = "";
+      } else {
+        errorMsg.textContent = "Incorrect password. Please try again.";
+      }
+    }
+  </script>
+</body>
+</html>

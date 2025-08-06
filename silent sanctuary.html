@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device‑width, initial-scale=1.0"/>
+  <title>Silent Sanctuary - Artist Profile</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { margin:0; padding:0; font-family:'Poppins',sans-serif; color:#000;
+      background: url('silent sanctuary.jpg') no-repeat center center fixed;
+      background-size:cover; backdrop-filter: blur(1px); }
+    header { background:rgba(255,255,255,0.9); padding:30px; text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3); position:relative; }
+    .home-button { position:absolute; left:30px; top:50%; transform:translateY(-50%);
+      padding:8px 16px; background:#00ffff; color:#000; text-decoration:none;
+      font-weight:600; border-radius:6px; font-size:16px; transition:background 0.3s; }
+    .home-button:hover { background:#ff4da6; color:#fff; }
+    .profile-pic { width:100px; height:100px; object-fit:cover; border-radius:50%;
+      border:3px solid #ff4da6; margin-bottom:10px; }
+    header h1 { font-size:42px; margin:10px 0 5px; }
+    header p { font-weight:300; font-size:18px; margin:0; }
+    .content { max-width:900px; margin:40px auto;
+      background:rgba(255,255,255,0.85); padding:30px; border-radius:12px; text-align:center; }
+    h2 { border-bottom:2px solid #ff4da6; padding-bottom:8px; margin-top:40px; font-weight:500; }
+    p { font-size:16px; margin-bottom:15px; }
+    ul { list-style:none; padding-left:0; text-align:center; }
+    ul li::before { content:"🎵 "; margin-right:5px; }
+    .album { margin-bottom:20px; background:rgba(255,255,255,0.5); padding:15px;
+      border-radius:10px; cursor:pointer; transition:background 0.3s; }
+    .album:hover { background:rgba(255,255,255,0.7); }
+    .album h3 { margin:0; color:#333; }
+    .song-list { display:none; margin-top:10px; padding-left:0; }
+    .social-links { display:flex; justify-content:center; gap:15px; margin-top:15px; }
+    .social-links a { color:#ff4da6; font-size:28px; transition:transform 0.3s,color 0.3s; }
+    .social-links a:hover { color:#000; transform:scale(1.2); }
+    footer { text-align:center; padding:20px; background:rgba(255,255,255,0.7);
+      margin-top:40px; color:#555; font-size:14px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="home-button">← Home</a>
+  <img src="silent sanctuaryy.jpg" alt="Silent Sanctuary" class="profile-pic">
+  <h1>Silent Sanctuary</h1>
+  <p>Filipino Rock Band • Classical Fusion • Emotional Storytelling</p>
+</header>
+
+<div class="content">
+  <section>
+    <h2>About Silent Sanctuary</h2>
+    <p><strong>Silent Sanctuary</strong> is a prominent Filipino band known for its unique fusion of alternative rock and classical music. Formed in the early 2000s, the group rose to fame in the Philippine music scene by incorporating classical string instruments—such as the cello, violin, and viola—into modern rock arrangements, creating a sound that is both distinct and emotionally powerful.</p>
+    <p>Their music often revolves around themes of love, heartbreak, longing, and personal reflection, which has deeply resonated with fans, especially those drawn to so-called hugot or emotionally intense music. Songs like "Ikaw Lamang," "Kundiman," "Sa’yo," "Pasensya Ka Na," and "Hiling" have become anthems for people going through romantic struggles, with lyrics written in Filipino that capture raw, heartfelt sentiments.</p>
+    <p>Over the years, Silent Sanctuary has undergone several lineup changes, but key members like vocalist and guitarist Raymund “Sarkie” Sarangay and cellist Anjo Inacay have remained central to their identity.</p>
+    <p>The band’s ability to blend traditional and modern musical elements has helped them carve out a niche in the OPM (Original Pilipino Music) industry, where they continue to influence younger generations of musicians. Despite the ever-changing music landscape, Silent Sanctuary maintains a strong following, performing in concerts, festivals, and college events across the country, and their music remains a staple in Filipino playlists dealing with love and loss.</p>
+  </section>
+
+  <section>
+    <h2>Studio Albums</h2>
+    <div class="album" onclick="toggleSongs(this)">
+      <h3>📀 Fuchsiang Pag‑ibig (2007)</h3>
+      <ul class="song-list">
+        <li>Rebound</li>
+        <li>Sandali Lang</li>
+        <li>Ikaw Lamang</li>
+        <li>Kundiman</li>
+        <li>Ingat Ka</li>
+        <li>Pink 5ive</li>
+        <li>For Tonight</li>
+	<li>Parol</li>
+	<li>Kismet</li>
+	<li>Nagtahan</li>
+	<li>Summer Song</li>
+	<li>14</li>
+      </ul>
+    </div>
+
+    <div class="album" onclick="toggleSongs(this)">
+      <h3>📀 Mistaken for Granted (2009)</h3>
+      <ul class="song-list">
+        <li>As I Tono</li>
+        <li>Pauwi Na Ako</li>
+	<li>Amakakeru Ryu No Hirameki</li>
+	<li>Hiling</li>
+	<li>Sa Buhay Na'to</li>
+	<li>Hinga Ng Malalim</li>
+	<li>The Saddest V.2</li>
+	<li>Tono Per Em</li>
+	<li>Hay Naku</li>
+	<li>Lalayo</li>
+	<li>An Tono Band Heras</li>
+	<li>Estekka</li>
+	<li>Patunayan</li>
+	<li>Dekada 90</li>
+      </ul>
+    </div>
+
+    <div class="album" onclick="toggleSongs(this)">
+      <h3>📀 Monodramatic (2013)</h3>
+      <ul class="song-list">
+        <li>Sa’yo</li>
+        <li>Meron Nang Iba</li>
+	<li>Masanay Ka Muna</li>
+	<li>Abot Langit</li>
+	<li>Bumalik Ka Na Sa'kin</li>
+	<li>Sama-sama</li>
+      </ul>
+    </div>
+
+    <div class="album" onclick="toggleSongs(this)">
+      <h3>📀 Langit. Luha. (2015)</h3>
+      <ul class="song-list">
+        <li>Baka Sakali</li>
+        <li>Pasensya Ka Na</li>
+	<li>Di Na Kita Mahal</li>
+	<li>Sa Piling Mo</li>
+	<li>Lambing</li>
+	<li>Balang Araw</li>
+	<li>Huli Na Ang Lahat</li>
+	<li>Mawala Ka</li>
+      </ul>
+    </div>
+
+    <div class="album" onclick="toggleSongs(this)">
+      <h3>📀 Silent Sanctuary: Deep Cuts 2013–2015 (Compilation, 2023)</h3>
+      <ul class="song-list">
+        <li>Sa'yo-Orchestra Version</li>
+	<li>Lambing</li>
+	<li>Bulalakaw</li>
+	<li>Mawala Ka</li>
+	<li>Abot Langit</li>
+	<li>Di Na Kita Mahal</li>
+	<li>Balang Araw</li>
+	<li>Baka Sakali</li>
+	<li>Sa Piling Mo</li>
+	<li>Sama-sama</li>
+	<li>Masanay Ka Muna</li>
+	<li>Huli Na Ang Lahat</li>
+      </ul>
+    </div>
+
+    <div class="album" onclick="toggleSongs(this)">
+      <h3>📀 Sagad (2025)</h3>
+      <ul class="song-list">
+        <li>Sagad</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Popular Songs</h2>
+    <ul>
+      <li>Ikaw Lamang</li>
+      <li>Pasensya Ka Na</li>
+      <li>Sa’yo</li>
+      <li>Rebound</li>
+      <li>Kundiman</li>
+      <li>Meron Nang Iba</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Follow Silent Sanctuary</h2>
+    <div class="social-links">
+      <a href="https://www.instagram.com/silentsanctuaryonline?utm_source=ig_web_button_share_sheet&igsh=MWRuM2VzeGo1bGs5Yg==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@silentsanctuaryph?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="http://youtube.com/@silentsanctuarytv?si=bKv76A" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://open.spotify.com/artist/4nGp682WMiKS4X217kPw8C?si=7IOt5213Tu2gawzdvwwukg" target="_blank"><i class="fab fa-spotify"></i></a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  &copy; 2025 Silent Sanctuary Fan Page. For music lovers, by music lovers.
+</footer>
+
+<script>
+  function toggleSongs(albumElement) {
+    const list = albumElement.querySelector('.song-list');
+    list.style.display = list.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+</body>
+</html>

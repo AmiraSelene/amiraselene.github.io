@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>wave to earth - Artist Profile</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+      background: url('wave to earthh.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(1px);
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .home-button {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+      font-size: 16px;
+    }
+
+    .home-button:hover {
+      background-color: #ff4da6;
+      color: #fff;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ff4da6;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 10px 0 5px;
+      text-transform: lowercase;
+    }
+
+    header p {
+      font-weight: 300;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff4da6;
+      padding-bottom: 8px;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    ul li::before {
+      content: "🎵 ";
+      margin-right: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #ff4da6;
+      font-size: 28px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #000;
+      transform: scale(1.2);
+    }
+
+    .album {
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .album:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .album h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .song-list {
+      display: none;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="home-button">← Home</a>
+    <img src="wave to earth.jpg" alt="wave to earth" class="profile-pic">
+    <h1>wave to earth</h1>
+    <p>Indie Rock • Lo-fi • Dream Pop Trio</p>
+  </header>
+
+  <div class="content">
+    <section>
+      <h2>About wave to earth</h2>
+      <p><strong>wave to earth</strong> is a South Korean indie band formed in 2018, consisting of <strong>Kim Daniel</strong> (vocals, guitar), <strong>Shin Dongkyu</strong> (drums), and <strong>John Cha</strong> (bass). Their name symbolizes their intention to spread waves of emotion through music.</p>
+      <p>With a cinematic blend of lo-fi, dream pop, and indie rock, wave to earth is known for their emotionally rich soundscapes, poetic lyrics, and mellow vibes. The band gained major attention with their single <em>Seasons</em> and later exploded in popularity across Asia and beyond.</p>
+      <p>Often writing about love, loneliness, nature, and the passage of time, wave to earth creates music that feels both nostalgic and timeless. Their visuals, sound, and fashion have made them icons of modern youth subculture, especially among international indie fans.</p>
+    </section>
+
+    <section>
+      <h2>Albums & EPs</h2>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 0.1 flaws and all (2023)</h3>
+        <ul class="song-list">
+          <li>bad</li>
+          <li>daisy</li>
+          <li>pink</li>
+          <li>sunburn</li>
+          <li>evening glow</li>
+          <li>love</li>
+          <li>homesick</li>
+        </ul>
+      </div>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 summer flows 0.02 (EP, 2020)</h3>
+        <ul class="song-list">
+          <li>light</li>
+          <li>surf</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Singles</h2>
+      <ul>
+        <li>Seasons (2019)</li>
+        <li>nouvelle vague (2021)</li>
+        <li>calla (2022)</li>
+        <li>homesick (2023)</li>
+        <li>sunburn (2023)</li>
+        <li>daisy (2023)</li>
+        <li>bad (2023)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Popular Songs</h2>
+      <ul>
+        <li>Seasons</li>
+        <li>daisy</li>
+        <li>sunburn</li>
+        <li>bad</li>
+        <li>homesick</li>
+        <li>calla</li>
+        <li>evening glow</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Follow wave to earth</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/wave_to_earth" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@wavetoearth" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com/artist/5069JTmv5ZDyPeZaCCXiCg?si=PR55aYr4TAuRS55wvAwWEw" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.tiktok.com/@wavetoearthofficial?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 wave to earth Fan Page. For music lovers, by music lovers.
+  </footer>
+
+  <script>
+    function toggleSongs(albumElement) {
+      const songList = albumElement.querySelector('.song-list');
+      songList.style.display = songList.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

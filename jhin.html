@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JHIN - Artist Profile</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+      background: url('jhin.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(1px);
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .home-button {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+      font-size: 16px;
+    }
+
+    .home-button:hover {
+      background-color: #ff4da6;
+      color: #fff;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ff4da6;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      font-weight: 300;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff4da6;
+      padding-bottom: 8px;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    ul li::before {
+      content: "🎵 ";
+      margin-right: 5px;
+    }
+
+    .album {
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .album:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .album h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .song-list {
+      display: none;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #ff4da6;
+      font-size: 28px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #000;
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="home-button">← Home</a>
+    <img src="jhinn.jpg" alt="JHIN" class="profile-pic">
+    <h1>JHIN</h1>
+    <p>Singer • Songwriter</p>
+  </header>
+
+  <div class="content">
+    <section>
+      <h2>About JHIN</h2>
+      <p><strong>JHIN</strong>, born Simon Sung‑Bin Jhin on March 26, 2001, in Chicago, Illinois, is a Korean-American singer-songwriter known for his emotional and genre-blending music. Raised in a family that valued both Korean traditions and academic success, JHIN was surrounded by music from an early age, especially Korean ballads and emo rock.</p>
+      <p>Despite pressure to follow a conventional path, he made the bold decision in 2020 to move to Seoul, South Korea, to pursue a music career. There, he trained under a respected producer and began writing and recording his own material. Later, he enrolled at New York University to study Music Business, balancing school with his growing success as an artist.</p>
+      <p>JHIN's music blends alternative R&B, indie-pop, and lo-fi influences. His sound is soft yet emotionally potent, often centered on themes of heartbreak, growth, self-discovery, and memory. With stripped-down production and introspective lyrics, he crafts songs that feel intimate and sincere.</p>
+      <p>He credits his musical development to a wide range of influences—from Dominic Fike and Juice WRLD to Korean singer-songwriters—drawing from both Western and Eastern sounds to shape his distinct voice.</p>
+      <p>JHIN is passionate about authenticity in music. He often writes from personal experience, allowing listeners to feel a deep emotional connection to his songs. Whether it's the sting of regret or the warmth of young love, he translates complex emotions into simple, beautiful melodies. He strives to break stereotypes and express his full identity as an Asian-American artist without conforming to industry expectations.</p>
+    </section>
+
+    <section>
+      <h2>Album</h2>
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 Alone With You (2025)</h3>
+        <ul class="song-list">
+          <li>Alone With You</li>
+          <li>Centerpiece</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Singles & EPs</h2>
+      <ul>
+        <li>Heavenmade (2024)</li>
+        <li>Anymore (2024)</li>
+        <li>Airplanes (2023)</li>
+        <li>Blue Butterflies (2023)</li>
+        <li>You Would (2022)</li>
+        <li>Crush on My Tutor (2022)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Popular Songs</h2>
+      <ul>
+        <li>Blue Butterflies</li>
+        <li>You Would</li>
+        <li>Heavenmade</li>
+        <li>Airplanes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Follow JHIN</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/jhinthekid?utm_source=ig_web_button_share_sheet&igsh=MXIzaTVxZmNtc3BsYg==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@jhinthekid?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@jhinofficial?si=-gRA_yJ1LfYYj52x" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com/artist/1zbZa82fOkxnWd44o2uV6c?si=GzXu_USsS8etrr5QntNnUg" target="_blank"><i class="fab fa-spotify"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 JHIN Fan Page. For music lovers, by music lovers.
+  </footer>
+
+  <script>
+    function toggleSongs(albumElement) {
+      const songList = albumElement.querySelector('.song-list');
+      songList.style.display = songList.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

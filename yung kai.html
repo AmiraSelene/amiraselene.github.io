@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yung Kai - Artist Profile</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+      background: url('yung kai.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(1px);
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .home-button {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+      font-size: 16px;
+    }
+
+    .home-button:hover {
+      background-color: #ff4da6;
+      color: #fff;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ff4da6;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      font-weight: 300;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff4da6;
+      padding-bottom: 8px;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    ul li::before {
+      content: "🎵 ";
+      margin-right: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #ff4da6;
+      font-size: 28px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #000;
+      transform: scale(1.2);
+    }
+
+    .album {
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .album:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .album h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .song-list {
+      display: none;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="home-button">← Home</a>
+    <img src="yung kaii.jpg" alt="Yung Kai" class="profile-pic">
+    <h1>Yung Kai</h1>
+    <p>Singer • Songwriter • Producer</p>
+  </header>
+
+  <div class="content">
+    <section>
+      <h2>About Yung Kai</h2>
+      <p><strong>Yung Kai</strong> (Max Zhang) is a Chinese-Canadian singer-songwriter and producer originally from Burnaby, British Columbia. Raised in Shanghai and Vancouver, he emerged as a powerful voice in modern indie and bedroom pop, known for emotionally cinematic ballads.</p>
+      <p>His breakout single <em>Blue</em> went viral in 2024, inspired by Asian dramas and his own experiences with heartbreak and healing. His music blends soft piano melodies with lo-fi textures and heartfelt storytelling, reminiscent of artists like Laufey, Wave to Earth, and Keshi.</p>
+      <p>Yung Kai creates from his bedroom studio, writing and producing everything himself. In just a short time, he’s cultivated a global fanbase and has been featured at festivals like Wanderland and 88rising's Head in the Clouds. His debut album is expected in late 2025.</p>
+    </section>
+
+    <section>
+      <h2>Albums & EPs</h2>
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 Debut Album (Coming 2025)</h3>
+        <ul class="song-list">
+          <li>Blue</li>
+          <li>Do You Think You Could Love Me?</li>
+          <li>Wildflower</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Singles</h2>
+      <ul>
+        <li>listen to this when you’re down &lt;3 (2022)</li>
+        <li>Blue (2024)</li>
+        <li>Wildflower (2024)</li>
+        <li>Do You Think You Could Love Me? (2025)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Popular Songs</h2>
+      <ul>
+        <li>Blue</li>
+        <li>Wildflower</li>
+        <li>Do You Think You Could Love Me?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Follow Yung Kai</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/ykaizzk?utm_source=ig_web_button_share_sheet&igsh=MW9kaGZlM2l6enQzbQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@prodszcs3hh?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@ykaizzk?si=Et65_6_cWylyXgJE" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com/artist/6zO1dZ40fTZ5hY9NnnRJSk?si=akMgUzpXSoqosKVtuRxa_Q" target="_blank"><i class="fab fa-spotify"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Yung Kai Fan Page. For music lovers, by music lovers.
+  </footer>
+
+  <script>
+    function toggleSongs(albumElement) {
+      const songList = albumElement.querySelector('.song-list');
+      songList.style.display = songList.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

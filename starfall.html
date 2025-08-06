@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starfall - Artist Profile</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+      background: url('starfalll.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(1px);
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .home-button {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+      font-size: 16px;
+    }
+
+    .home-button:hover {
+      background-color: #ff4da6;
+      color: #fff;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ff4da6;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      font-weight: 300;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff4da6;
+      padding-bottom: 8px;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    ul li::before {
+      content: "🎵 ";
+      margin-right: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #ff4da6;
+      font-size: 28px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #000;
+      transform: scale(1.2);
+    }
+
+    .album {
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .album:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .album h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .song-list {
+      display: none;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="home-button">← Home</a>
+    <img src="starfall.jpg" alt="Starfall" class="profile-pic">
+    <h1>Starfall</h1>
+    <p>Singer • Songwriter • Producer</p>
+  </header>
+
+  <div class="content">
+    <section>
+      <h2>About Starfall</h2>
+      <p>Richard Okamoto, professionally known as <strong>Starfall</strong>, is a Japanese-American singer-songwriter from Oahu, Hawaii. Best known for his heartfelt track <em>Intentions</em>, Starfall gained early recognition as a rising voice in the lo-fi R&B and anti-pop scenes.</p>
+      <p>Growing up in a family of five siblings, he often turned to music during lonely moments, drawing inspiration from artists like Daniel Caesar, Bryson Tiller, and Rex Orange County. At just 14, he began writing and recording original songs, uploading them to SoundCloud, where he quickly built an online following.</p>
+      <p>Starfall’s music blends dreamy pop, lo-fi R&B, and anti-pop with introspective lyricism and raw emotional honesty. His songs delve into themes of heartbreak, healing, longing, and self-discovery—often written as intimate reflections pulled straight from his own life.</p>
+      <p>With a sound that shifts between tender acoustic ballads and smooth, rhythmic R&B grooves, Starfall creates a deeply personal listening experience. His storytelling, vulnerability, and distinct style continue to resonate with fans around the world, marking him as a unique and authentic voice in modern music.</p>
+    </section>
+
+    <section>
+      <h2>Albums & EPs</h2>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 lose myself (EP, 2023)</h3>
+        <ul class="song-list">
+          <li>the truth</li>
+          <li>never lasts</li>
+          <li>missing u</li>
+          <li>memories</li>
+          <li>tied up</li>
+          <li>drop dead</li>
+        </ul>
+      </div>
+
+      <div class="album" onclick="toggleSongs(this)">
+        <h3>📀 alone tonight (EP, 2024)</h3>
+        <ul class="song-list">
+          <li>alone tonight</li>
+          <li>intentions</li>
+          <li>burn my tongue</li>
+          <li>talk to me</li>
+          <li>darling, he lied</li>
+          <li>hero</li>
+          <li>weeknight</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Singles</h2>
+      <ul>
+        <li>speechless (2021)</li>
+        <li>the truth (2021)</li>
+        <li>never lasts (2021)</li>
+        <li>missing u (2021)</li>
+        <li>memories (2021)</li>
+        <li>tied up (2022)</li>
+        <li>drop dead (2022)</li>
+        <li>intentions (2024)</li>
+        <li>burn my tongue (2024)</li>
+        <li>talk to me (2024)</li>
+        <li>darling, he lied (2024)</li>
+        <li>hero (2024)</li>
+        <li>weeknight (2025)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Popular Songs</h2>
+      <ul>
+        <li>intentions</li>
+        <li>tied up</li>
+        <li>drop dead</li>
+        <li>the truth</li>
+        <li>darling, he lied</li>
+        <li>hero</li>
+        <li>talk to me</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Follow Starfall</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/starfallxo?igsh=MXFhOWR6MWI0ZnB2cA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@starfallxos?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@starfallxo?si=PjSVWpOSPyzoG7-7" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com/artist/6h0Wppb5dQnlGpY2zuGstd?si=uE_DleL_SeuHev37EqEPsA
+" target="_blank"><i class="fab fa-spotify"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Starfall Fan Page. For music lovers, by music lovers.
+  </footer>
+
+  <script>
+    function toggleSongs(albumElement) {
+      const songList = albumElement.querySelector('.song-list');
+      songList.style.display = songList.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

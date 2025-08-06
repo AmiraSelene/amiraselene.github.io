@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luke Chiang - Artist Profile</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #000;
+      background: url('luke chiang.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(1px);
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .home-button {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+      font-size: 16px;
+    }
+
+    .home-button:hover {
+      background-color: #ff4da6;
+      color: #fff;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ff4da6;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      font-weight: 300;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff4da6;
+      padding-bottom: 8px;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    ul li::before {
+      content: "🎵 ";
+      margin-right: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #ff4da6;
+      font-size: 28px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #000;
+      transform: scale(1.2);
+    }
+
+    .album {
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .album:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .album h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .song-list {
+      display: none;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="home-button">← Home</a>
+    <img src="luke chiangg.jpg" alt="Luke Chiang" class="profile-pic">
+    <h1>Luke Chiang</h1>
+    <p>Singer • Songwriter • Producer</p>
+  </header>
+
+  <div class="content">
+    <section>
+      <h2>About Luke Chiang</h2>
+      <p><strong>Luke Chiang</strong> is an R&B singer known for his soulful music and captivating vocals. Born in the United States, Luke Chiang has made a significant impact in the music industry with his popular songs like "Shouldn't Be," "May I Ask," "Paragraphs," and "Used to Me." Despite facing a challenging throat condition between 2019 and 2023 that temporarily hindered his ability to sing, Luke Chiang persevered and continued to pursue his passion for music. He released his debut single, "May I Ask," in 2019, marking the beginning of his musical journey.</p>
+      <p>Blending soul, R&B, and bedroom pop, Luke's sound is characterized by smooth melodies, jazzy chords, and personal storytelling. His breakout songs like <em>May I Ask</em> and <em>Comfort</em> touch on themes of love, vulnerability, and personal growth, resonating deeply with fans around the world.</p>
+      <p>His music often features minimalistic production, clean electric guitar tones, and introspective lyrics — making him a standout voice in the new wave of indie R&B artists.</p>
+    </section>
+
+    <section>
+  <h2>Albums & EPs</h2>
+
+  <div class="album" onclick="toggleSongs(this)">
+    <h3>📀 LYFE (EP, 2023)</h3>
+    <ul class="song-list">
+      <li>May I Ask</li>
+      <li>Used to Me</li>
+      <li>Comfort</li>
+      <li>Don’t Call Me</li>
+      <li>Electric</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Singles</h2>
+  <ul>
+    <li>May I Ask (2019)</li>
+    <li>Shouldn’t Be (2019)</li>
+    <li>Used to Me (2019)</li>
+    <li>Home (2019)</li>
+    <li>Paragraphs (2019)</li>
+    <li>Never Tell (2024)</li>
+    <li>Static (2024)</li>
+  </ul>
+</section>
+
+    <section>
+      <h2>Follow Luke Chiang</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/lukaschiang?utm_source=ig_web_button_share_sheet&igsh=MXIxeGdvNTFyemVzcA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@lukaschiang?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@lukechiang1055?si=7D5C-PVjZmHMdW69" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com/artist/1dPSMH55yhvjYIwqCP4iDj?si=bjbGh5lpTGGvSy7xT2c9Bw" target="_blank"><i class="fab fa-spotify"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Luke Chiang Fan Page. For music lovers, by music lovers.
+  </footer>
+
+  <script>
+    function toggleSongs(albumElement) {
+      const songList = albumElement.querySelector('.song-list');
+      songList.style.display = songList.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
